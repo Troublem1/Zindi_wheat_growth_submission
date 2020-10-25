@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "==19.10b0"
+isort = "*"
+autoflake = "*"
+pylint = "*"
+pre-commit = "*"
+
+[packages]
+pandas = "*"
+numpy = "==1.18.5"
+scipy = "*"
+seaborn = "*"
+jupyterlab = "*"
+scikit-learn = "==0.23.2"
+catboost = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+beautify = "bash -c \"autoflake -i -r --expand-star-imports --remove-all-unused-imports --remove-duplicate-keys --remove-unused-variables **/*.py; isort **/*.py; black **/*.py\""
+lint = "bash -c \"pylint **/*.py\""

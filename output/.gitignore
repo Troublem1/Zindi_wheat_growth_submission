@@ -1,0 +1,4 @@
+output\models\.ipynb_checkpoints
+*
+!.gitignore
+!README.md
